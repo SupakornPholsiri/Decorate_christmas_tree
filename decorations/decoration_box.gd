@@ -17,7 +17,7 @@ func _process(delta):
 
 func give_decor(player : CharacterBody2D):
 	if player.decor == null:
-		player.decor = decors[randi_range(0, len(decors))]
+		player.decor = decors[randi_range(0, len(decors)-1)]
 		
 func get_all_decor_file(path : String):
 	var file_paths : Array[String] = []
