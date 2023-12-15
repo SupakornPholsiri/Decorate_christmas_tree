@@ -199,5 +199,5 @@ texture = ExtResource("1_6gtl0")
 7:7/0/physics_layer_0/angular_velocity = 0.0
 
 [resource]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_d8f4g")
