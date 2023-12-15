@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://dy68wvf0wasa2"]
+[gd_scene load_steps=5 format=3 uid="uid://dy68wvf0wasa2"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_57c0i"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yplyx"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vgto7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3u0q4"]
+size = Vector2(20, 30)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 collision_mask = 2
@@ -17,3 +20,10 @@ shape = SubResource("CapsuleShape2D_yplyx")
 position = Vector2(0, 5.96046e-07)
 scale = Vector2(20, 30)
 texture = SubResource("PlaceholderTexture2D_vgto7")
+
+[node name="InteractArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
+shape = SubResource("RectangleShape2D_3u0q4")
+
+[connection signal="area_entered" from="InteractArea" to="." method="_on_interact_area_area_entered"]

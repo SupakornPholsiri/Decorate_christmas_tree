@@ -1,5 +1,7 @@
 extends Area2D
 
+class_name DecorationSpot
+
 var decor : Decoration = null
 @onready var no_decor_texture : Texture2D = $Sprite2D.texture
 
