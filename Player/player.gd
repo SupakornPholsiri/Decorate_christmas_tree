@@ -27,6 +27,11 @@ func _ready():
 	player_move_down = "P%s_move_down" % which_player
 	
 func _physics_process(delta):
+	
+	# Add the gravity.
+	if not is_on_floor():
+		velocity.y += gravity * delta
+		
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis(player_move_left, player_move_right)
