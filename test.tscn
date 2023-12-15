@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://xlbf2eyjsgss"]
+[gd_scene load_steps=4 format=3 uid="uid://xlbf2eyjsgss"]
 
 [ext_resource type="PackedScene" uid="uid://dy68wvf0wasa2" path="res://Player/player.tscn" id="1_a3iwq"]
 [ext_resource type="TileSet" uid="uid://cib57u0ox4fx0" path="res://test_tile_set.tres" id="2_ynh0h"]
+[ext_resource type="PackedScene" uid="uid://cjeu0723674cg" path="res://christmas_tree/christmas_tree.tscn" id="3_u8ses"]
 
 [node name="Test" type="Node"]
+
+[node name="ChristmasTree" parent="." instance=ExtResource("3_u8ses")]
+position = Vector2(428, 488)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("2_ynh0h")
