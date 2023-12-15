@@ -12,48 +12,48 @@ gradient = SubResource("Gradient_yt3vb")
 script = ExtResource("1_wvvq2")
 
 [node name="Tree" type="Sprite2D" parent="."]
-position = Vector2(0, 2)
-scale = Vector2(0.539063, 175)
+position = Vector2(0, -57.375)
+scale = Vector2(0.824219, 369.25)
 texture = SubResource("GradientTexture1D_u7ftt")
 
 [node name="Decorations" type="Node2D" parent="."]
 position = Vector2(0, 53)
 
 [node name="decor_spot13" parent="Decorations" instance=ExtResource("1_nsph0")]
-position = Vector2(55, -38)
+position = Vector2(79, 11)
 
 [node name="decor_spot12" parent="Decorations" instance=ExtResource("1_nsph0")]
-position = Vector2(1, -38)
+position = Vector2(0, 11)
 
 [node name="decor_spot11" parent="Decorations" instance=ExtResource("1_nsph0")]
-position = Vector2(-27, -38)
+position = Vector2(-40, 11)
 
 [node name="decor_spot10" parent="Decorations" instance=ExtResource("1_nsph0")]
-position = Vector2(-55, -38)
+position = Vector2(-79, 11)
 
 [node name="decor_spot9" parent="Decorations" instance=ExtResource("1_nsph0")]
-position = Vector2(28, -38)
+position = Vector2(39, 11)
 
 [node name="decor_spot8" parent="Decorations" instance=ExtResource("1_nsph0")]
-position = Vector2(41, -69)
+position = Vector2(59, -53)
 
 [node name="decor_spot7" parent="Decorations" instance=ExtResource("1_nsph0")]
-position = Vector2(-42, -69)
+position = Vector2(-61, -53)
 
 [node name="decor_spot6" parent="Decorations" instance=ExtResource("1_nsph0")]
-position = Vector2(-14, -69)
+position = Vector2(-20, -53)
 
 [node name="decor_spot5" parent="Decorations" instance=ExtResource("1_nsph0")]
-position = Vector2(14, -69)
+position = Vector2(20, -53)
 
 [node name="decor_spot4" parent="Decorations" instance=ExtResource("1_nsph0")]
-position = Vector2(28, -100)
+position = Vector2(39, -117)
 
 [node name="decor_spot3" parent="Decorations" instance=ExtResource("1_nsph0")]
-position = Vector2(0, -100)
+position = Vector2(0, -117)
 
 [node name="decor_spot2" parent="Decorations" instance=ExtResource("1_nsph0")]
-position = Vector2(-28, -100)
+position = Vector2(-41, -117)
 
 [node name="decor_spot" parent="Decorations" instance=ExtResource("1_nsph0")]
-position = Vector2(0, -129)
+position = Vector2(0, -180)
