@@ -58,6 +58,12 @@ P2_move_down={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Platform"
+2d_physics/layer_3="Decoration"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
