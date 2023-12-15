@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="Decoration" load_steps=3 format=3 uid="uid://cfmyl0eefj2on"]
 
 [ext_resource type="Script" path="res://decorations/Decoration.gd" id="1_4deuq"]
-[ext_resource type="Texture2D" uid="uid://d3xcv7sredy63" path="res://icon.svg" id="2_et2hr"]
+[ext_resource type="Texture2D" uid="uid://r57r7p50pd8e" path="res://bat.png" id="2_y3328"]
 
 [resource]
 script = ExtResource("1_4deuq")
-texture = ExtResource("2_et2hr")
+texture = ExtResource("2_y3328")
