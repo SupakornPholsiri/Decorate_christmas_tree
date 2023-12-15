@@ -1,10 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dy68wvf0wasa2"]
+[gd_scene load_steps=4 format=3 uid="uid://dy68wvf0wasa2"]
+
+[ext_resource type="Script" path="res://Player/player.gd" id="1_57c0i"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yplyx"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vgto7"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_57c0i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_yplyx")
