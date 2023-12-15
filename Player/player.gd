@@ -17,9 +17,9 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _ready():
 	# Temporary test code ----------------------------------------
 	if which_player == 1:
-		decor = preload("res://decorations/candy_cane.tres")
+		decor = preload("res://decorations/resources/candy_cane.tres")
 	else:
-		decor = preload("res://decorations/mini_present.tres")
+		decor = preload("res://decorations/resources/mini_present.tres")
 	# ------------------------------------------------------------
 	player_move_left = "P%s_move_left" % which_player
 	player_move_right = "P%s_move_right" % which_player
@@ -47,7 +47,10 @@ func _physics_process(delta):
 	# Interaction code
 	if target_area != null and Input.is_action_just_pressed("P%s_interact" % which_player):
 		if target_area is DecorationSpot:
-			target_area.set_decor(decor)
+			if target_area.set_decor(decor):
+				decor = null
+		elif target_area is DecorationBox:
+			target_area.give_decor(self)
 
 # Get the nearest area that overlaps the InteractArea
 func nearest_overlapping_area():

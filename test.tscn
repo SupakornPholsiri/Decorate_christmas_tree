@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://xlbf2eyjsgss"]
+[gd_scene load_steps=5 format=3 uid="uid://xlbf2eyjsgss"]
 
 [ext_resource type="PackedScene" uid="uid://dy68wvf0wasa2" path="res://Player/player.tscn" id="1_a3iwq"]
 [ext_resource type="TileSet" uid="uid://cib57u0ox4fx0" path="res://test_tile_set.tres" id="2_ynh0h"]
 [ext_resource type="PackedScene" uid="uid://cjeu0723674cg" path="res://christmas_tree/christmas_tree.tscn" id="3_u8ses"]
+[ext_resource type="PackedScene" uid="uid://co1gd81ixp3g6" path="res://decorations/decoration_box.tscn" id="4_y6cn2"]
 
 [node name="Test" type="Node"]
 
@@ -21,3 +22,9 @@ which_player = 1.0
 [node name="P2" parent="." instance=ExtResource("1_a3iwq")]
 position = Vector2(551, 548)
 which_player = 2.0
+
+[node name="DecorationBox2" parent="." instance=ExtResource("4_y6cn2")]
+position = Vector2(206, 550)
+
+[node name="DecorationBox" parent="." instance=ExtResource("4_y6cn2")]
+position = Vector2(699, 552)

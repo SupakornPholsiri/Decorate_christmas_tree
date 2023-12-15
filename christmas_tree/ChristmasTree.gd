@@ -1,8 +1,8 @@
 extends Node2D
 
 # For testing
-@onready var decor1 = preload("res://decorations/mini_present.tres")
-@onready var decor2 = preload("res://decorations/candy_cane.tres")
+@onready var decor1 = preload("res://decorations/resources/candy_cane.tres")
+@onready var decor2 = preload("res://decorations/resources/mini_present.tres")
 func decorations_tests():
 	 # Put up decorations on all empty spots
 	for decor_spot in $Decorations.get_children():

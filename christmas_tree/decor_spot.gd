@@ -16,7 +16,7 @@ func _process(delta):
 # Call this function from the object that can put up decorations.
 # Also return whether the decoration was put or not
 func set_decor(new_decor : Decoration):
-	if decor == null:
+	if decor == null and new_decor != null:
 		decor = new_decor
 		$Sprite2D.texture = decor.texture
 		# Successfully put up the decoration.
