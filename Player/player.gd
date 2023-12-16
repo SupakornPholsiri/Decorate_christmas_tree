@@ -132,5 +132,5 @@ func throw_decor(pos : Vector2):
 		var decor_item_instance = decor_item.instantiate()
 		decor_item_instance.decor = decor
 		decor_item_instance.global_position = pos
-		get_tree().get_current_scene().add_child(decor_item_instance)
+		add_sibling(decor_item_instance)
 		decor = null
