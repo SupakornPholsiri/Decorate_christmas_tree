@@ -44,9 +44,10 @@ func _physics_process(delta):
 
 	move_and_slide()
 	#endregion
-	
+
 	var areas : Array[Area2D]	
 	#region Check for DecorationItem and collect if there is
+
 	for area in $InteractArea.get_overlapping_areas():
 		if not area is DecorationItem:
 			areas.append(area)
