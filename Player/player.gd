@@ -67,7 +67,7 @@ func _physics_process(delta):
 			target_area.give_decor(self)
 	#endregion
 			
-	# Ladder code
+	#region Ladder code
 	if target_area is Ladder and target_area.is_ladder_ready:
 		if target_area.ladder_type == "bottom" and Input.is_action_just_pressed(player_move_up):
 			global_position.y -= 60
@@ -76,6 +76,7 @@ func _physics_process(delta):
 		else:
 			# TODO: Tell player that the ladder not ready
 			pass
+	#endregion
 
 # Get the nearest area that overlaps the InteractArea
 func nearest_overlapping_area():

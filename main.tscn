@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://d1tnk1bcyn7vr"]
+[gd_scene load_steps=6 format=3 uid="uid://5545fiej7shn"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_b48r5"]
 [ext_resource type="PackedScene" uid="uid://cjeu0723674cg" path="res://christmas_tree/christmas_tree.tscn" id="2_jaaew"]
