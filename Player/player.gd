@@ -77,6 +77,14 @@ func _physics_process(delta):
 			# TODO: Tell player that the ladder not ready
 			pass
 	#endregion
+	
+	#region Code of throwing decoration
+	if Input.is_action_just_pressed(player_throw_up):
+		throw_decor(global_position + Vector2.UP * 100)
+		
+	if Input.is_action_just_pressed(player_throw_down):
+		throw_decor(global_position + Vector2.DOWN * 100)
+	#endregion
 
 # Get the nearest area that overlaps the InteractArea
 func nearest_overlapping_area():
@@ -90,14 +98,6 @@ func nearest_overlapping_area():
 		if new_area_distance < area_distance:
 			area_distance = new_area_distance
 			target_area = area
-			
-	#region Code of throwing decoration
-	if Input.is_action_just_pressed(player_throw_up):
-		throw_decor(global_position + Vector2.UP * 100)
-		
-	if Input.is_action_just_pressed(player_throw_down):
-		throw_decor(global_position + Vector2.DOWN * 100)
-	#endregion
 	
 # Get the nearest node from the Array
 func get_nearest_node(nodes : Array):
