@@ -12,17 +12,12 @@ func _ready():
 	ladder_height = get_node("../Sprite2D").transform.y.y - 20
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
-
 func _on_check_player_area_body_entered(body):
 	is_ladder_ready = false
-	print(body.name, "enter", ladder_type)
-
 
 func _on_check_player_area_body_exited(body):
 	is_ladder_ready = true
-	print(body.name, "exit", ladder_type)
