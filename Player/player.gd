@@ -29,6 +29,7 @@ func _ready():
 	
 func _physics_process(delta):
 	
+	#region movement
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -42,8 +43,9 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	#endregion
 	
-	# Check for DecorationItem and collect if there is
+	#region Check for DecorationItem and collect if there is
 	var areas : Array[Area2D]
 	for area in $InteractArea.get_overlapping_areas():
 		if not area is DecorationItem:
@@ -51,9 +53,9 @@ func _physics_process(delta):
 		else:
 			if collect_decor(area.decor):
 				area.queue_free()
-			
+	#endregion
 	
-	# Interaction code
+	#region Interaction code
 	var target_area = get_nearest_node(areas)
 	
 	if target_area != null and Input.is_action_just_pressed(player_interact):
@@ -62,14 +64,16 @@ func _physics_process(delta):
 				decor = null
 		elif target_area is DecorationBox:
 			target_area.give_decor(self)
+	#endregion
 			
-	# Code of throwing decoration
+	#region Code of throwing decoration
 	if Input.is_action_just_pressed(player_throw_up):
 		throw_decor(global_position + Vector2.UP * 100)
 		
 	if Input.is_action_just_pressed(player_throw_down):
 		throw_decor(global_position + Vector2.DOWN * 100)
-
+	#endregion
+	
 # Get the nearest node from the Array
 func get_nearest_node(nodes : Array):
 
