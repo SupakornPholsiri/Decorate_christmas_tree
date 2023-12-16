@@ -67,6 +67,29 @@ func _physics_process(delta):
 			target_area.give_decor(self)
 	#endregion
 			
+	# Ladder code
+	if target_area is Ladder and target_area.is_ladder_ready:
+		if target_area.ladder_type == "bottom" and Input.is_action_just_pressed(player_move_up):
+			global_position.y -= 60
+		elif target_area.ladder_type == "top" and Input.is_action_just_pressed(player_move_down):
+			global_position.y += 60
+		else:
+			# TODO: Tell player that the ladder not ready
+			pass
+
+# Get the nearest area that overlaps the InteractArea
+func nearest_overlapping_area():
+
+	var areas : Array[Area2D] = $InteractArea.get_overlapping_areas()
+	var target_area : Area2D
+	var area_distance = INF
+	
+	for area in areas:
+		var new_area_distance = global_position.distance_to(area.global_position)
+		if new_area_distance < area_distance:
+			area_distance = new_area_distance
+			target_area = area
+			
 	#region Code of throwing decoration
 	if Input.is_action_just_pressed(player_throw_up):
 		throw_decor(global_position + Vector2.UP * 100)

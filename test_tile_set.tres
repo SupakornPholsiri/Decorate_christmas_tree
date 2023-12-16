@@ -1,6 +1,8 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cib57u0ox4fx0"]
+[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://cib57u0ox4fx0"]
 
 [ext_resource type="Texture2D" uid="uid://d3xcv7sredy63" path="res://icon.svg" id="1_6gtl0"]
+[ext_resource type="PackedScene" uid="uid://deh3ma81uevd4" path="res://ladder/ladder_bottom.tscn" id="2_4tai5"]
+[ext_resource type="PackedScene" uid="uid://dvnvtitp6agth" path="res://ladder/ladder_top.tscn" id="3_3g7dg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d8f4g"]
 texture = ExtResource("1_6gtl0")
@@ -199,6 +201,11 @@ texture = ExtResource("1_6gtl0")
 7:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 7:7/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_0jopx"]
+scenes/2/scene = ExtResource("2_4tai5")
+scenes/3/scene = ExtResource("3_3g7dg")
+
 [resource]
 physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_d8f4g")
+sources/2 = SubResource("TileSetScenesCollectionSource_0jopx")
