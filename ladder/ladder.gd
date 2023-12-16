@@ -2,12 +2,14 @@ extends Area2D
 
 class_name Ladder
 
+var ladder_height: float
 var is_ladder_ready: bool
 @export_enum("bottom", "top") var ladder_type: String
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	is_ladder_ready = true
+	ladder_height = get_node("../Sprite2D").transform.y.y - 20
 	pass # Replace with function body.
 
 

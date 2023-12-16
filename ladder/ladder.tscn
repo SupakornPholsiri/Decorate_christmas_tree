@@ -8,11 +8,13 @@
 size = Vector2(16, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g3gyb"]
+size = Vector2(10.24, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8qj5c"]
 size = Vector2(16, 27)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mn7qj"]
+size = Vector2(10.24, 20)
 
 [node name="ladder" type="Node2D"]
 

@@ -70,9 +70,9 @@ func _physics_process(delta):
 	#region Ladder code
 	if target_area is Ladder and target_area.is_ladder_ready:
 		if target_area.ladder_type == "bottom" and Input.is_action_just_pressed(player_move_up):
-			global_position.y -= 60
+			global_position.y -= target_area.ladder_height
 		elif target_area.ladder_type == "top" and Input.is_action_just_pressed(player_move_down):
-			global_position.y += 60
+			global_position.y += target_area.ladder_height
 		else:
 			# TODO: Tell player that the ladder not ready
 			pass
