@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xwqwyidua5si"
-path="res://.godot/imported/red sock.png-0326a3882bafdd6e2ba5ba1601feb3c3.ctex"
+uid="uid://b46ivcwxlwtix"
+path="res://.godot/imported/green ornament.png-a18d434dbe3481e091a17d8dd3a526c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://decorations/red sock.png"
-dest_files=["res://.godot/imported/red sock.png-0326a3882bafdd6e2ba5ba1601feb3c3.ctex"]
+source_file="res://decorations/picture/green ornament.png"
+dest_files=["res://.godot/imported/green ornament.png-a18d434dbe3481e091a17d8dd3a526c2.ctex"]
 
 [params]
 

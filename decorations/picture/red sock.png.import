@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxpdo1uk4cl3m"
-path="res://.godot/imported/candy cane.png-cb1c3baff1ada1121ea43f32782ae2e3.ctex"
+uid="uid://xwqwyidua5si"
+path="res://.godot/imported/red sock.png-befc62062b747e0ab2d6a0ff92c25363.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://decorations/candy cane.png"
-dest_files=["res://.godot/imported/candy cane.png-cb1c3baff1ada1121ea43f32782ae2e3.ctex"]
+source_file="res://decorations/picture/red sock.png"
+dest_files=["res://.godot/imported/red sock.png-befc62062b747e0ab2d6a0ff92c25363.ctex"]
 
 [params]
 
