@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://5545fiej7shn"]
+[gd_scene load_steps=9 format=3 uid="uid://5545fiej7shn"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_b48r5"]
 [ext_resource type="PackedScene" uid="uid://cjeu0723674cg" path="res://christmas_tree/christmas_tree.tscn" id="2_jaaew"]
@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://cxxxv5x4koug6" path="res://decorations/decoration_box.tscn" id="5_n3vdi"]
 [ext_resource type="AudioStream" uid="uid://b81yman8onbn1" path="res://Christmas Village - Aaron Kenny.mp3" id="6_clirs"]
 [ext_resource type="PackedScene" uid="uid://tw7xd7cky4ax" path="res://ladder/ladder.tscn" id="7_mvxvv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oqven"]
+size = Vector2(20, 488)
 
 [node name="Main" type="Node"]
 script = ExtResource("1_b48r5")
@@ -101,6 +104,18 @@ position = Vector2(0, -97)
 
 [node name="CollisionShape2D_bottom" parent="World/InGameNodes/ladder4/top_ladder/CheckPlayerArea" index="0"]
 position = Vector2(-200, -2)
+
+[node name="InvisibleWall" type="StaticBody2D" parent="World/InGameNodes"]
+position = Vector2(27, 0)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/InGameNodes/InvisibleWall"]
+position = Vector2(261, 244)
+shape = SubResource("RectangleShape2D_oqven")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="World/InGameNodes/InvisibleWall"]
+position = Vector2(793, 244)
+shape = SubResource("RectangleShape2D_oqven")
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
