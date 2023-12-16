@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Decoration" load_steps=3 format=3 uid="uid://cvgojtlwiey06"]
+
+[ext_resource type="Script" path="res://decorations/Decoration.gd" id="1_hvuyb"]
+[ext_resource type="Texture2D" uid="uid://xwqwyidua5si" path="res://decorations/red sock.png" id="2_7k4qt"]
+
+[resource]
+script = ExtResource("1_hvuyb")
+texture = ExtResource("2_7k4qt")

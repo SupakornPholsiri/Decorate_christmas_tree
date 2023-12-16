@@ -54,4 +54,4 @@ position = Vector2(-63, -199)
 position = Vector2(0, -293)
 
 [node name="decor_spot" parent="Decorations" instance=ExtResource("1_nsph0")]
-position = Vector2(0, -386)
+position = Vector2(0, -376)
