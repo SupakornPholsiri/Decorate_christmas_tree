@@ -3,9 +3,11 @@ extends Node
 @onready var timer = $Timer
 @onready var world = $World
 @onready var ingame_nodes = $World/InGameNodes
+@onready var audino = $AudioStreamPlayer2D
 
 func _ready():
 	start_game()
+	audino.play()
 
 func _process(delta):
 	print(timer.time_left)
