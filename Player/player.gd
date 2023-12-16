@@ -1,10 +1,12 @@
 extends CharacterBody2D
 
+signal decor_changed(decor : Decoration, player_num : int)
+
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 @export_range(1, 2, 1) var which_player
 
-var decor : Decoration = null
+var decor : Decoration = null : set = set_decor
 var decor_item = preload("res://decorations/decoration_item.tscn")
 
 var player_move_left 
@@ -85,6 +87,10 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed(player_throw_down):
 		throw_decor(global_position + Vector2.DOWN * 100)
 	#endregion
+
+func set_decor(new_decor : Decoration):
+	decor = new_decor
+	emit_signal("decor_changed", decor, which_player)
 
 # Get the nearest area that overlaps the InteractArea
 func nearest_overlapping_area():

@@ -138,6 +138,20 @@ offset_right = 1127.0
 offset_bottom = 628.0
 text = "Back"
 
+[node name="P1Inventory" type="TextureRect" parent="UI"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 567.0
+offset_right = 91.0
+offset_bottom = 615.0
+
+[node name="P2Inventory" type="TextureRect" parent="UI"]
+layout_mode = 0
+offset_left = 1054.0
+offset_top = 562.0
+offset_right = 1102.0
+offset_bottom = 610.0
+
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
