@@ -43,6 +43,12 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="Time" type="Label" parent="UI"]
+layout_mode = 0
+offset_right = 206.0
+offset_bottom = 23.0
+text = "0"
+
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
