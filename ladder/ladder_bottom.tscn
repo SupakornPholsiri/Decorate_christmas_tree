@@ -1,17 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://pbpat5m5ssq0"]
+[gd_scene load_steps=4 format=3 uid="uid://deh3ma81uevd4"]
 
-[ext_resource type="Script" path="res://ladder/ladder.gd" id="1_b25wq"]
+[ext_resource type="Script" path="res://ladder/ladder_bottom.gd" id="1_urh5i"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_kqbto"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kb2u8"]
+size = Vector2(16, 16)
 
-[node name="ladder" type="Area2D"]
-script = ExtResource("1_b25wq")
+[node name="ladder_bottom" type="Area2D"]
+script = ExtResource("1_urh5i")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(20, 20)
+scale = Vector2(16, 16)
 texture = SubResource("PlaceholderTexture2D_kqbto")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_kb2u8")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -51,6 +51,15 @@ func _physics_process(delta):
 				decor = null
 		elif target_area is DecorationBox:
 			target_area.give_decor(self)
+			
+	# Ladder code
+	if target_area is LadderBottom and Input.is_action_just_pressed(player_move_up):
+		global_position.y -= 60
+		print(target_area.test)
+	
+	if target_area is LadderTop and Input.is_action_just_pressed(player_move_down):
+		global_position.y += 60
+		print(target_area.test)
 
 # Get the nearest area that overlaps the InteractArea
 func nearest_overlapping_area():
