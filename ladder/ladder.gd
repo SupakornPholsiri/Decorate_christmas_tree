@@ -9,7 +9,7 @@ var is_ladder_ready: bool
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	is_ladder_ready = true
-	ladder_height = get_node("../Sprite2D").transform.y.y - 20
+	ladder_height = get_node("../Sprite2D").region_rect.size.y - 20
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

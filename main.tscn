@@ -46,7 +46,7 @@ position = Vector2(380, 465)
 
 [node name="Sprite2D" parent="World/InGameNodes/ladder" index="0"]
 position = Vector2(0, -51)
-scale = Vector2(16, 118)
+region_rect = Rect2(0, 0, 32, 118)
 
 [node name="CollisionShape2D_top" parent="World/InGameNodes/ladder/bottom_ladder/CheckPlayerArea" index="0"]
 position = Vector2(174, -99)
@@ -62,7 +62,7 @@ position = Vector2(754, 368)
 
 [node name="Sprite2D" parent="World/InGameNodes/ladder2" index="0"]
 position = Vector2(0, -51)
-scale = Vector2(16, 118)
+region_rect = Rect2(0, 0, 32, 118)
 
 [node name="CollisionShape2D_top" parent="World/InGameNodes/ladder2/bottom_ladder/CheckPlayerArea" index="0"]
 position = Vector2(-200, -99)
@@ -78,7 +78,7 @@ position = Vector2(380, 272)
 
 [node name="Sprite2D" parent="World/InGameNodes/ladder3" index="0"]
 position = Vector2(0, -51)
-scale = Vector2(16, 118)
+region_rect = Rect2(0, 0, 32, 118)
 
 [node name="CollisionShape2D_top" parent="World/InGameNodes/ladder3/bottom_ladder/CheckPlayerArea" index="0"]
 position = Vector2(174, -99)
@@ -94,7 +94,7 @@ position = Vector2(754, 176)
 
 [node name="Sprite2D" parent="World/InGameNodes/ladder4" index="0"]
 position = Vector2(0, -51)
-scale = Vector2(16, 118)
+region_rect = Rect2(0, 0, 32, 118)
 
 [node name="CollisionShape2D_top" parent="World/InGameNodes/ladder4/bottom_ladder/CheckPlayerArea" index="0"]
 position = Vector2(-200, -99)
