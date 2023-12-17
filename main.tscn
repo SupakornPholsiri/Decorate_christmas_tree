@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://5545fiej7shn"]
+[gd_scene load_steps=12 format=3 uid="uid://5545fiej7shn"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_b48r5"]
 [ext_resource type="PackedScene" uid="uid://cjeu0723674cg" path="res://christmas_tree/christmas_tree.tscn" id="2_jaaew"]
@@ -7,6 +7,15 @@
 [ext_resource type="PackedScene" uid="uid://cxxxv5x4koug6" path="res://decorations/decoration_box.tscn" id="5_n3vdi"]
 [ext_resource type="AudioStream" uid="uid://b81yman8onbn1" path="res://Christmas Village - Aaron Kenny.mp3" id="6_clirs"]
 [ext_resource type="PackedScene" uid="uid://tw7xd7cky4ax" path="res://ladder/ladder.tscn" id="7_mvxvv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_26diy"]
+size = Vector2(10.88, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i68xm"]
+size = Vector2(10.88, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i24qm"]
+size = Vector2(10.88, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oqven"]
 size = Vector2(20, 488)
@@ -25,7 +34,7 @@ position = Vector2(566, 384)
 position = Vector2(138, -104)
 tile_set = ExtResource("3_cytm1")
 format = 2
-layer_0/tile_data = PackedInt32Array(2359306, 262144, 2, 2359307, 262144, 2, 2359308, 262144, 2, 2359309, 262144, 2, 2359310, 262144, 2, 2359311, 262144, 2, 2359312, 262144, 2, 2359313, 262144, 2, 2359314, 262144, 2, 2359315, 262144, 2, 2359316, 262144, 2, 2359317, 262144, 2, 2359318, 262144, 2, 2359319, 262144, 2, 2359320, 262144, 2, 2359321, 262144, 2, 2359322, 262144, 2, 2359323, 262144, 2, 2359324, 262144, 2, 2359325, 262144, 2, 2359326, 262144, 2, 2359327, 262144, 2, 2359328, 262144, 2, 2359329, 262144, 2, 2359330, 262144, 2, 2359331, 262144, 2, 2359332, 262144, 2, 2359333, 262144, 2, 2359334, 262144, 2, 2359335, 262144, 2, 2359336, 262144, 2, 2359337, 262144, 2, 1966097, 196608, 2, 1966096, 196608, 2, 1966095, 196608, 2, 1966094, 196608, 2, 1966093, 196608, 2, 1966092, 196608, 2, 1966090, 196608, 2, 1966091, 196608, 2, 1966098, 196608, 2, 1966099, 196608, 2, 1966100, 196608, 2, 1966101, 196608, 2, 1966102, 196608, 2, 1966103, 196608, 2, 1966104, 196608, 2, 1966105, 196608, 2, 1966106, 196608, 2, 1966107, 196608, 2, 1966108, 196608, 2, 1966109, 196608, 2, 1966110, 196608, 2, 1966111, 196608, 2, 1966112, 196608, 2, 1966113, 196608, 2, 1966114, 196608, 2, 1966115, 196608, 2, 1966116, 196608, 2, 1966117, 196608, 2, 1966118, 196608, 2, 1966119, 196608, 2, 1966120, 196608, 2, 1966121, 196608, 2, 1572874, 196608, 2, 1572875, 196608, 2, 1572876, 196608, 2, 1572877, 196608, 2, 1572878, 196608, 2, 1572879, 196608, 2, 1572880, 196608, 2, 1572881, 196608, 2, 1572882, 196608, 2, 1572883, 196608, 2, 1572884, 196608, 2, 1572885, 196608, 2, 1572886, 196608, 2, 1572887, 196608, 2, 1572888, 196608, 2, 1572889, 196608, 2, 1572890, 196608, 2, 1572891, 196608, 2, 1572892, 196608, 2, 1572893, 196608, 2, 1572894, 196608, 2, 1572895, 196608, 2, 1572896, 196608, 2, 1572897, 196608, 2, 1572898, 196608, 2, 1572899, 196608, 2, 1572900, 196608, 2, 1572901, 196608, 2, 1572902, 196608, 2, 1572903, 196608, 2, 1572904, 196608, 2, 1572905, 196608, 2, 1179658, 196608, 2, 1179659, 196608, 2, 1179660, 196608, 2, 1179661, 196608, 2, 1179662, 196608, 2, 1179663, 196608, 2, 1179664, 196608, 2, 1179665, 196608, 2, 1179666, 196608, 2, 1179667, 196608, 2, 1179668, 196608, 2, 1179669, 196608, 2, 1179670, 196608, 2, 1179671, 196608, 2, 1179672, 196608, 2, 1179673, 196608, 2, 1179674, 196608, 2, 1179675, 196608, 2, 1179676, 196608, 2, 1179677, 196608, 2, 1179678, 196608, 2, 1179679, 196608, 2, 1179680, 196608, 2, 1179681, 196608, 2, 1179682, 196608, 2, 1179683, 196608, 2, 1179684, 196608, 2, 1179685, 196608, 2, 1179686, 196608, 2, 1179687, 196608, 2, 1179688, 196608, 2, 1179689, 196608, 2, 786442, 196608, 2, 786443, 196608, 2, 786444, 196608, 2, 786445, 196608, 2, 786446, 196608, 2, 786447, 196608, 2, 786448, 196608, 2, 786449, 196608, 2, 786450, 196608, 2, 786451, 196608, 2, 786452, 196608, 2, 786453, 196608, 2, 786454, 196608, 2, 786455, 196608, 2, 786456, 196608, 2, 786457, 196608, 2, 786458, 196608, 2, 786459, 196608, 2, 786460, 196608, 2, 786461, 196608, 2, 786462, 196608, 2, 786463, 196608, 2, 786464, 196608, 2, 786465, 196608, 2, 786466, 196608, 2, 786467, 196608, 2, 786469, 196608, 2, 786468, 196608, 2, 786470, 196608, 2, 786471, 196608, 2, 786472, 196608, 2, 786473, 196608, 2)
+layer_0/tile_data = PackedInt32Array(2359306, 262144, 2, 2359307, 262144, 2, 2359308, 262144, 2, 2359309, 262144, 2, 2359310, 262144, 2, 2359311, 262144, 2, 2359312, 262144, 2, 2359313, 262144, 2, 2359314, 262144, 2, 2359315, 262144, 2, 2359316, 262144, 2, 2359317, 262144, 2, 2359318, 262144, 2, 2359319, 262144, 2, 2359320, 262144, 2, 2359321, 262144, 2, 2359322, 262144, 2, 2359323, 262144, 2, 2359324, 262144, 2, 2359325, 262144, 2, 2359326, 262144, 2, 2359327, 262144, 2, 2359328, 262144, 2, 2359329, 262144, 2, 2359330, 262144, 2, 2359331, 262144, 2, 2359332, 262144, 2, 2359333, 262144, 2, 2359334, 262144, 2, 2359335, 262144, 2, 2359336, 262144, 2, 2359337, 262144, 2, 1966097, 196608, 2, 1966096, 196608, 2, 1966095, 196608, 2, 1966094, 196608, 2, 1966093, 196608, 2, 1966092, 196608, 2, 1966090, 196608, 2, 1966091, 196608, 2, 1966098, 196608, 2, 1966099, 196608, 2, 1966100, 196608, 2, 1966101, 196608, 2, 1966102, 196608, 2, 1966103, 196608, 2, 1966104, 196608, 2, 1966105, 196608, 2, 1966106, 196608, 2, 1966107, 196608, 2, 1966108, 196608, 2, 1966109, 196608, 2, 1966110, 196608, 2, 1966111, 196608, 2, 1966112, 196608, 2, 1966113, 196608, 2, 1966114, 196608, 2, 1966115, 196608, 2, 1966116, 196608, 2, 1966117, 196608, 2, 1966118, 196608, 2, 1966119, 196608, 2, 1966120, 196608, 2, 1966121, 196608, 2, 1572874, 196608, 2, 1572875, 196608, 2, 1572876, 196608, 2, 1572877, 196608, 2, 1572878, 196608, 2, 1572879, 196608, 2, 1572880, 196608, 2, 1572881, 196608, 2, 1572882, 196608, 2, 1572883, 196608, 2, 1572884, 196608, 2, 1572885, 196608, 2, 1572886, 196608, 2, 1572887, 196608, 2, 1572888, 196608, 2, 1572889, 196608, 2, 1572890, 196608, 2, 1572891, 196608, 2, 1572892, 196608, 2, 1572893, 196608, 2, 1572894, 196608, 2, 1572895, 196608, 2, 1572896, 196608, 2, 1572897, 196608, 2, 1572898, 196608, 2, 1572899, 196608, 2, 1572900, 196608, 2, 1572901, 196608, 2, 1572902, 196608, 2, 1572903, 196608, 2, 1572904, 196608, 2, 1572905, 196608, 2, 1179658, 196608, 2, 1179659, 196608, 2, 1179660, 196608, 2, 1179661, 196608, 2, 1179662, 196608, 2, 1179663, 196608, 2, 1179664, 196608, 2, 1179665, 196608, 2, 1179666, 196608, 2, 1179667, 196608, 2, 1179668, 196608, 2, 1179669, 196608, 2, 1179670, 196608, 2, 1179671, 196608, 2, 1179672, 196608, 2, 1179673, 196608, 2, 1179674, 196608, 2, 1179675, 196608, 2, 1179676, 196608, 2, 1179677, 196608, 2, 1179678, 196608, 2, 1179679, 196608, 2, 1179680, 196608, 2, 1179681, 196608, 2, 1179682, 196608, 2, 1179683, 196608, 2, 1179684, 196608, 2, 1179685, 196608, 2, 1179686, 196608, 2, 1179687, 196608, 2, 1179688, 196608, 2, 1179689, 196608, 2, 786442, 196608, 2, 786443, 196608, 2, 786444, 196608, 2, 786445, 196608, 2, 786446, 196608, 2, 786447, 196608, 2, 786448, 196608, 2, 786449, 196608, 2, 786450, 196608, 2, 786451, 196608, 2, 786452, 196608, 2, 786453, 196608, 2, 786454, 196608, 2, 786455, 196608, 2, 786456, 196608, 2, 786457, 196608, 2, 786458, 196608, 2, 786459, 196608, 2, 786460, 196608, 2, 786461, 196608, 2, 786462, 196608, 2, 786463, 196608, 2, 786464, 196608, 2, 786465, 196608, 2, 786466, 196608, 2, 786467, 196608, 2, 786469, 196608, 2, 786468, 196608, 2, 786470, 196608, 2, 786471, 196608, 2, 786472, 196608, 2, 786473, 196608, 2, 2359338, 262144, 2, 1966122, 262144, 2, 2359339, 262144, 2, 1966123, 262144, 2, 1572906, 262144, 2, 1572907, 262144, 2, 1179690, 262144, 2, 1179691, 262144, 2, 786474, 262144, 2, 786475, 262144, 2)
 
 [node name="P1" parent="World/InGameNodes" instance=ExtResource("4_3tuax")]
 position = Vector2(412, 160)
@@ -39,7 +48,7 @@ which_player = 2.0
 position = Vector2(323, 159)
 
 [node name="DecorationBox" parent="World/InGameNodes" instance=ExtResource("5_n3vdi")]
-position = Vector2(785, 447)
+position = Vector2(817, 447)
 
 [node name="ladder" parent="World/InGameNodes" instance=ExtResource("7_mvxvv")]
 position = Vector2(380, 465)
@@ -49,13 +58,14 @@ position = Vector2(0, -51)
 region_rect = Rect2(0, 0, 32, 118)
 
 [node name="CollisionShape2D_top" parent="World/InGameNodes/ladder/bottom_ladder/CheckPlayerArea" index="0"]
-position = Vector2(174, -99)
+position = Vector2(190, -99)
+shape = SubResource("RectangleShape2D_26diy")
 
 [node name="top_CollisionShape2D" parent="World/InGameNodes/ladder/top_ladder" index="0"]
 position = Vector2(0, -97)
 
 [node name="CollisionShape2D_bottom" parent="World/InGameNodes/ladder/top_ladder/CheckPlayerArea" index="0"]
-position = Vector2(174, -2)
+position = Vector2(190, -2)
 
 [node name="ladder2" parent="World/InGameNodes" instance=ExtResource("7_mvxvv")]
 position = Vector2(754, 368)
@@ -65,13 +75,14 @@ position = Vector2(0, -51)
 region_rect = Rect2(0, 0, 32, 118)
 
 [node name="CollisionShape2D_top" parent="World/InGameNodes/ladder2/bottom_ladder/CheckPlayerArea" index="0"]
-position = Vector2(-200, -99)
+position = Vector2(-184, -98)
+shape = SubResource("RectangleShape2D_i68xm")
 
 [node name="top_CollisionShape2D" parent="World/InGameNodes/ladder2/top_ladder" index="0"]
 position = Vector2(0, -97)
 
 [node name="CollisionShape2D_bottom" parent="World/InGameNodes/ladder2/top_ladder/CheckPlayerArea" index="0"]
-position = Vector2(-200, -2)
+position = Vector2(-184, -2)
 
 [node name="ladder3" parent="World/InGameNodes" instance=ExtResource("7_mvxvv")]
 position = Vector2(380, 272)
@@ -81,13 +92,14 @@ position = Vector2(0, -51)
 region_rect = Rect2(0, 0, 32, 118)
 
 [node name="CollisionShape2D_top" parent="World/InGameNodes/ladder3/bottom_ladder/CheckPlayerArea" index="0"]
-position = Vector2(174, -99)
+position = Vector2(190, -98)
 
 [node name="top_CollisionShape2D" parent="World/InGameNodes/ladder3/top_ladder" index="0"]
 position = Vector2(0, -97)
 
 [node name="CollisionShape2D_bottom" parent="World/InGameNodes/ladder3/top_ladder/CheckPlayerArea" index="0"]
-position = Vector2(174, -2)
+position = Vector2(190, -2)
+shape = SubResource("RectangleShape2D_i24qm")
 
 [node name="ladder4" parent="World/InGameNodes" instance=ExtResource("7_mvxvv")]
 position = Vector2(754, 176)
@@ -97,13 +109,13 @@ position = Vector2(0, -51)
 region_rect = Rect2(0, 0, 32, 118)
 
 [node name="CollisionShape2D_top" parent="World/InGameNodes/ladder4/bottom_ladder/CheckPlayerArea" index="0"]
-position = Vector2(-200, -99)
+position = Vector2(-184, -98)
 
 [node name="top_CollisionShape2D" parent="World/InGameNodes/ladder4/top_ladder" index="0"]
 position = Vector2(0, -97)
 
 [node name="CollisionShape2D_bottom" parent="World/InGameNodes/ladder4/top_ladder/CheckPlayerArea" index="0"]
-position = Vector2(-200, -2)
+position = Vector2(-184, -2)
 
 [node name="InvisibleWall" type="StaticBody2D" parent="World/InGameNodes"]
 position = Vector2(27, 0)
@@ -114,7 +126,7 @@ position = Vector2(261, 244)
 shape = SubResource("RectangleShape2D_oqven")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="World/InGameNodes/InvisibleWall"]
-position = Vector2(793, 244)
+position = Vector2(825, 244)
 shape = SubResource("RectangleShape2D_oqven")
 
 [node name="UI" type="Control" parent="."]
