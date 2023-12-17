@@ -45,10 +45,10 @@ position = Vector2(687, 427)
 which_player = 2.0
 
 [node name="DecorationBox2" parent="World/InGameNodes" instance=ExtResource("5_n3vdi")]
-position = Vector2(323, 159)
+position = Vector2(322, 160)
 
 [node name="DecorationBox" parent="World/InGameNodes" instance=ExtResource("5_n3vdi")]
-position = Vector2(817, 447)
+position = Vector2(818, 448)
 
 [node name="ladder" parent="World/InGameNodes" instance=ExtResource("7_mvxvv")]
 position = Vector2(380, 465)
