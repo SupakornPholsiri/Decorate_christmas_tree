@@ -36,7 +36,7 @@ position = Vector2(687, 427)
 which_player = 2.0
 
 [node name="DecorationBox2" parent="World/InGameNodes" instance=ExtResource("5_n3vdi")]
-position = Vector2(325, 351)
+position = Vector2(323, 159)
 
 [node name="DecorationBox" parent="World/InGameNodes" instance=ExtResource("5_n3vdi")]
 position = Vector2(772, 446)
@@ -123,12 +123,6 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Time" type="Label" parent="UI"]
-layout_mode = 0
-offset_right = 206.0
-offset_bottom = 23.0
-text = "0"
-
 [node name="Back" type="Button" parent="UI"]
 visible = false
 layout_mode = 0
@@ -138,19 +132,30 @@ offset_right = 1127.0
 offset_bottom = 628.0
 text = "Back"
 
-[node name="P1Inventory" type="TextureRect" parent="UI"]
+[node name="IngameUI" type="Control" parent="UI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="P1Inventory" type="TextureRect" parent="UI/IngameUI"]
 layout_mode = 0
 offset_left = 43.0
 offset_top = 567.0
 offset_right = 91.0
 offset_bottom = 615.0
 
-[node name="P2Inventory" type="TextureRect" parent="UI"]
+[node name="P2Inventory" type="TextureRect" parent="UI/IngameUI"]
 layout_mode = 0
 offset_left = 1054.0
 offset_top = 562.0
 offset_right = 1102.0
 offset_bottom = 610.0
+
+[node name="Time" type="Label" parent="UI/IngameUI"]
+layout_mode = 0
+offset_right = 206.0
+offset_bottom = 23.0
+text = "0"
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true

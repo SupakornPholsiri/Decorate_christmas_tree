@@ -1,13 +1,36 @@
-[gd_scene load_steps=5 format=3 uid="uid://dy68wvf0wasa2"]
+[gd_scene load_steps=8 format=3 uid="uid://dy68wvf0wasa2"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_57c0i"]
+[ext_resource type="Texture2D" uid="uid://b5ie10agv5022" path="res://Player/Player1-sheet.png" id="2_bl07b"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yplyx"]
+radius = 16.0
+height = 48.0
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vgto7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_enqxu"]
+atlas = ExtResource("2_bl07b")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vqbt"]
+atlas = ExtResource("2_bl07b")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gvt2s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_enqxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vqbt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3u0q4"]
-size = Vector2(20, 30)
+size = Vector2(32, 48)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 collision_mask = 2
@@ -16,10 +39,10 @@ script = ExtResource("1_57c0i")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_yplyx")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 5.96046e-07)
-scale = Vector2(20, 30)
-texture = SubResource("PlaceholderTexture2D_vgto7")
+sprite_frames = SubResource("SpriteFrames_gvt2s")
+autoplay = "default"
 
 [node name="InteractArea" type="Area2D" parent="."]
 

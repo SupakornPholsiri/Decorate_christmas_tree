@@ -21,6 +21,9 @@ var player_throw_down
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
+	var spriteframes = load("res://Player/player%s_spriteframe.tres" % which_player)
+	$AnimatedSprite2D.sprite_frames = spriteframes
+	
 	player_move_left = "P%s_move_left" % which_player
 	player_move_right = "P%s_move_right" % which_player
 	player_move_up = "P%s_move_up" % which_player
@@ -43,7 +46,12 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+	
+	if direction > 0:
+		$AnimatedSprite2D.flip_h = true
+	elif direction < 0:
+		$AnimatedSprite2D.flip_h = false
+		
 	move_and_slide()
 	#endregion
 

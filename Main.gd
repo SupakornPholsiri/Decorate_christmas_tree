@@ -1,16 +1,19 @@
 extends Node
 
 @onready var timer = $Timer
+@onready var audio = $AudioStreamPlayer2D
+
+@onready var back = $UI/Back
+@onready var ingame_ui = $UI/IngameUI
+@onready var p1_inventory = $UI/IngameUI/P1Inventory
+@onready var p2_inventory = $UI/IngameUI/P2Inventory
+@onready var ui_timer = $UI/IngameUI/Time
+
 @onready var world = $World
 @onready var ingame_nodes = $World/InGameNodes
-@onready var audio = $AudioStreamPlayer2D
-@onready var ui_timer = $UI/Time
-@onready var back = $UI/Back
-@onready var p1_inventory = $UI/P1Inventory
-@onready var p2_inventory = $UI/P2Inventory
+@onready var christmas_tree = $World/ChristmasTree
 @onready var p1 = $World/InGameNodes/P1
 @onready var p2 = $World/InGameNodes/P2
-@onready var christmas_tree = $World/ChristmasTree
 
 func _ready():
 	p1.connect("decor_changed", update_inventory)
@@ -27,6 +30,7 @@ func start_game():
 func end_game():
 	christmas_tree.hide_empty_spots()
 	ingame_nodes.visible = false
+	ingame_ui.hide()
 	world.set_process(false)
 	world.set_physics_process(false)
 	back.visible = true
