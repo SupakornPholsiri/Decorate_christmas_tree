@@ -73,6 +73,9 @@ func _physics_process(delta):
 	#region Interaction code
 	var target_area = get_nearest_node(areas)
 	
+	if target_area is DecorationSpot:
+		target_area.is_player_on_top = true
+	
 	if target_area != null and Input.is_action_just_pressed(player_interact):
 		if target_area is DecorationSpot:
 			if target_area.set_decor(decor):
@@ -82,14 +85,14 @@ func _physics_process(delta):
 	#endregion
 			
 	#region Ladder code
-	if target_area is Ladder and target_area.is_ladder_ready:
-		if target_area.ladder_type == "bottom" and Input.is_action_just_pressed(player_move_up):
+	if target_area is Ladder:
+		if not target_area.is_ladder_ready:
+			pass
+			#TODO: tell player its not ready
+		elif target_area.ladder_type == "bottom" and Input.is_action_just_pressed(player_move_up):
 			global_position.y -= target_area.ladder_height
 		elif target_area.ladder_type == "top" and Input.is_action_just_pressed(player_move_down):
 			global_position.y += target_area.ladder_height
-		else:
-			# TODO: Tell player that the ladder not ready
-			pass
 	#endregion
 	
 	#region Code of throwing decoration
