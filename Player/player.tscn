@@ -29,3 +29,4 @@ autoplay = "default"
 shape = SubResource("RectangleShape2D_3u0q4")
 
 [connection signal="area_entered" from="InteractArea" to="." method="_on_interact_area_area_entered"]
+[connection signal="area_exited" from="InteractArea" to="." method="_on_interact_area_area_exited"]

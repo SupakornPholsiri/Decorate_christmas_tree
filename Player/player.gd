@@ -149,3 +149,7 @@ func throw_decor(pos : Vector2):
 		decor_item_instance.global_position = pos
 		add_sibling(decor_item_instance)
 		decor = null
+
+func _on_interact_area_area_exited(area):
+	if area is DecorationSpot or area is DecorationBox or area is Ladder:
+		area.highlight_area(null)

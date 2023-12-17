@@ -56,9 +56,7 @@ position = Vector2(0, -2)
 scale = Vector2(50, 1)
 shape = SubResource("RectangleShape2D_mn7qj")
 
-[connection signal="body_exited" from="bottom_ladder" to="bottom_ladder" method="_on_body_exited"]
 [connection signal="body_entered" from="bottom_ladder/CheckPlayerArea" to="bottom_ladder" method="_on_check_player_area_body_entered"]
 [connection signal="body_exited" from="bottom_ladder/CheckPlayerArea" to="bottom_ladder" method="_on_check_player_area_body_exited"]
-[connection signal="body_exited" from="top_ladder" to="top_ladder" method="_on_body_exited"]
 [connection signal="body_entered" from="top_ladder/CheckPlayerArea" to="top_ladder" method="_on_check_player_area_body_entered"]
 [connection signal="body_exited" from="top_ladder/CheckPlayerArea" to="top_ladder" method="_on_check_player_area_body_exited"]
