@@ -7,7 +7,7 @@ var decors : Array[Decoration]
 
 var is_player_on_top : bool
 @onready var texture : Texture2D = $Sprite2D.texture
-@onready var texture_highlight : Texture2D = preload("res://empty_spot_highlight.png")
+@onready var texture_highlight : Texture2D = preload("res://decorations/DecorationBox_highlight.png")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
