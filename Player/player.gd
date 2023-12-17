@@ -21,6 +21,7 @@ var player_throw_down
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
+	
 	var spriteframes = load("res://Player/player%s_spriteframe.tres" % which_player)
 	$AnimatedSprite2D.sprite_frames = spriteframes
 	
@@ -100,7 +101,7 @@ func _physics_process(delta):
 		throw_decor(global_position + Vector2.UP * 100)
 		
 	if Input.is_action_just_pressed(player_throw_down):
-		throw_decor(global_position + Vector2.DOWN * 100)
+		throw_decor(global_position + Vector2.DOWN * 90)
 	#endregion
 
 func set_decor(new_decor : Decoration):

@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c4gry1xknigqy" path="res://candycane_platform.png" id="4_btmjc"]
 [ext_resource type="PackedScene" uid="uid://cxxxv5x4koug6" path="res://decorations/decoration_box.tscn" id="5_n3vdi"]
 [ext_resource type="PackedScene" uid="uid://tw7xd7cky4ax" path="res://ladder/ladder.tscn" id="7_mvxvv"]
-[ext_resource type="AudioStream" uid="uid://kemmsvnkemra" path="res://5. The night of Christmas.wav" id="8_55bb6"]
+[ext_resource type="AudioStream" uid="uid://bbrlr17ycwx8q" path="res://5. The night of Christmas.wav" id="8_55bb6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4x8er"]
 texture = ExtResource("4_btmjc")
@@ -61,7 +61,7 @@ position = Vector2(417, 132)
 which_player = 1.0
 
 [node name="P2" parent="World/InGameNodes" instance=ExtResource("4_3tuax")]
-position = Vector2(766, 422)
+position = Vector2(766, 447)
 which_player = 2.0
 
 [node name="DecorationBox2" parent="World/InGameNodes" instance=ExtResource("5_n3vdi")]

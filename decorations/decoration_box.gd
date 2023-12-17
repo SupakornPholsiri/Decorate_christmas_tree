@@ -8,11 +8,21 @@ var decors : Array[Decoration]
 @onready var texture : Texture2D = $Sprite2D.texture
 @onready var texture_highlight : Texture2D = preload("res://decorations/DecorationBox_highlight.png")
 
+const BLUE_ORNAMENT = preload("res://decorations/resources/blue_ornament.tres")
+const CANDY_CANE = preload("res://decorations/resources/candy_cane.tres")
+const GREEN_ORNAMENT = preload("res://decorations/resources/green_ornament.tres")
+const MINI_PRESENT = preload("res://decorations/resources/mini_present.tres")
+const RED_SOCK = preload("res://decorations/resources/red_sock.tres")
+const STAR = preload("res://decorations/resources/star.tres")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	decor_files = get_all_decor_file("res://decorations/resources/")
-	for file in decor_files:
-		decors.append(load(file))
+	decors.append(BLUE_ORNAMENT)
+	decors.append(CANDY_CANE)
+	decors.append(GREEN_ORNAMENT)
+	decors.append(MINI_PRESENT)
+	decors.append(RED_SOCK)
+	decors.append(STAR)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
