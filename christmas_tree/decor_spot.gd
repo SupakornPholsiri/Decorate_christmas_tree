@@ -3,7 +3,6 @@ extends Area2D
 class_name DecorationSpot
 
 var decor : Decoration = null
-var is_player_on_top : bool
 var is_spot_empty : bool = true
 @onready var no_decor_texture : Texture2D = $Sprite2D.texture
 @onready var no_decor_texture_highlight : Texture2D = preload("res://empty_spot_highlight.png")

@@ -5,7 +5,6 @@ class_name DecorationBox
 var decor_files : Array[String]
 var decors : Array[Decoration]
 
-var is_player_on_top : bool
 @onready var texture : Texture2D = $Sprite2D.texture
 @onready var texture_highlight : Texture2D = preload("res://decorations/DecorationBox_highlight.png")
 
