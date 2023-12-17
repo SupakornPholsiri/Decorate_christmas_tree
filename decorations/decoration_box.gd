@@ -17,8 +17,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$Sprite2D.texture = texture_highlight if is_player_on_top else texture
-	is_player_on_top = false
+	pass
 
 func give_decor(player : CharacterBody2D):
 	if player.decor == null:
@@ -35,5 +34,12 @@ func get_all_decor_file(path : String):
 		file_name = dir.get_next()
 	return file_paths
 	
-func highlight_area():
-	is_player_on_top = true
+func highlight_area(area: Area2D):
+	if self == area:
+		$Sprite2D.texture = texture_highlight
+	else:
+		$Sprite2D.texture = texture
+
+
+func _on_body_exited(body):
+	$Sprite2D.texture = texture

@@ -14,9 +14,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if is_spot_empty:
-		$Sprite2D.texture = no_decor_texture_highlight if is_player_on_top else no_decor_texture
-		is_player_on_top = false
+	pass
 
 # Call this function from the object that can put up decorations.
 # Also return whether the decoration was put or not
@@ -35,5 +33,15 @@ func remove_decor():
 	$Sprite2D.texture = no_decor_texture
 	is_spot_empty = true
 	
-func highlight_area():
-	is_player_on_top = true
+func highlight_area(area: Area2D):
+	if not is_spot_empty:
+		return
+	if self == area:
+		$Sprite2D.texture = no_decor_texture_highlight
+	else:
+		$Sprite2D.texture = no_decor_texture
+
+func _on_body_exited(body):
+	if not is_spot_empty:
+		return
+	$Sprite2D.texture = no_decor_texture
