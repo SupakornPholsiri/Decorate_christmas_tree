@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://dy68wvf0wasa2" path="res://Player/player.tscn" id="4_3tuax"]
 [ext_resource type="Texture2D" uid="uid://c4gry1xknigqy" path="res://candycane_platform.png" id="4_btmjc"]
 [ext_resource type="PackedScene" uid="uid://cxxxv5x4koug6" path="res://decorations/decoration_box.tscn" id="5_n3vdi"]
-[ext_resource type="AudioStream" uid="uid://b81yman8onbn1" path="res://Christmas Village - Aaron Kenny.mp3" id="6_clirs"]
 [ext_resource type="PackedScene" uid="uid://tw7xd7cky4ax" path="res://ladder/ladder.tscn" id="7_mvxvv"]
+[ext_resource type="AudioStream" uid="uid://kemmsvnkemra" path="res://5. The night of Christmas.wav" id="8_55bb6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4x8er"]
 texture = ExtResource("4_btmjc")
@@ -194,7 +194,7 @@ text = "0"
 one_shot = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("6_clirs")
+stream = ExtResource("8_55bb6")
 
 [connection signal="pressed" from="UI/Back" to="." method="_on_back_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
