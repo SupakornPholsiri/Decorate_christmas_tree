@@ -44,13 +44,17 @@ func _physics_process(delta):
 	var direction = Input.get_axis(player_move_left, player_move_right)
 	if direction:
 		velocity.x = direction * SPEED
+		
+		if direction > 0:
+			$AnimatedSprite2D.play("walking")
+			$AnimatedSprite2D.flip_h = true
+		elif direction < 0:
+			$AnimatedSprite2D.play("walking")
+			$AnimatedSprite2D.flip_h = false
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-	
-	if direction > 0:
-		$AnimatedSprite2D.flip_h = true
-	elif direction < 0:
-		$AnimatedSprite2D.flip_h = false
+		
+		$AnimatedSprite2D.play("default")
 		
 	move_and_slide()
 	#endregion
