@@ -1,9 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cxxxv5x4koug6"]
 
 [ext_resource type="Script" path="res://decorations/decoration_box.gd" id="1_xcxrl"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_0b2yf"]
-size = Vector2(48, 48)
+[ext_resource type="Texture2D" uid="uid://cme3ytbtmjige" path="res://decorations/DecorationBox.png" id="2_maoua"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eqvhd"]
 size = Vector2(48, 48)
@@ -12,7 +10,7 @@ size = Vector2(48, 48)
 script = ExtResource("1_xcxrl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("PlaceholderTexture2D_0b2yf")
+texture = ExtResource("2_maoua")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_eqvhd")

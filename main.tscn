@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://5545fiej7shn"]
+[gd_scene load_steps=13 format=3 uid="uid://5545fiej7shn"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_b48r5"]
+[ext_resource type="Texture2D" uid="uid://6bf5vdm66yx4" path="res://Background.png" id="2_hw0jm"]
 [ext_resource type="PackedScene" uid="uid://cjeu0723674cg" path="res://christmas_tree/christmas_tree.tscn" id="2_jaaew"]
 [ext_resource type="TileSet" uid="uid://cib57u0ox4fx0" path="res://test_tile_set.tres" id="3_cytm1"]
 [ext_resource type="PackedScene" uid="uid://dy68wvf0wasa2" path="res://Player/player.tscn" id="4_3tuax"]
@@ -24,6 +25,10 @@ size = Vector2(20, 488)
 script = ExtResource("1_b48r5")
 
 [node name="World" type="Node2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="World"]
+position = Vector2(576, 324)
+texture = ExtResource("2_hw0jm")
 
 [node name="ChristmasTree" parent="World" instance=ExtResource("2_jaaew")]
 position = Vector2(566, 384)
