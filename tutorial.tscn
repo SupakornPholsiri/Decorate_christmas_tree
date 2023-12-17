@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpn6snbrwsq1m"]
+
+[ext_resource type="Script" path="res://tutorial.gd" id="1_6g4kk"]
+[ext_resource type="Texture2D" uid="uid://bvw83r0y7kmh6" path="res://controls.png" id="2_a2r67"]
+
+[node name="Tutorial" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6g4kk")
+
+[node name="Back" type="Button" parent="."]
+offset_left = 1082.0
+offset_top = 597.0
+offset_right = 1127.0
+offset_bottom = 628.0
+text = "Back"
+
+[node name="Controls" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.581818, 0.6)
+texture = ExtResource("2_a2r67")
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
