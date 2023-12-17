@@ -10,6 +10,7 @@ extends Node
 @onready var p2_inventory = $UI/P2Inventory
 @onready var p1 = $World/InGameNodes/P1
 @onready var p2 = $World/InGameNodes/P2
+@onready var christmas_tree = $World/ChristmasTree
 
 func _ready():
 	p1.connect("decor_changed", update_inventory)
@@ -24,6 +25,7 @@ func start_game():
 	timer.start(30)
 	
 func end_game():
+	christmas_tree.hide_empty_spots()
 	ingame_nodes.visible = false
 	world.set_process(false)
 	world.set_physics_process(false)

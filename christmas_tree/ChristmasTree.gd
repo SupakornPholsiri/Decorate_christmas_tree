@@ -34,3 +34,8 @@ func _process(delta):
 func remove_decorations():
 	for decor_spot in $Decorations.get_children():
 		decor_spot.remove_decor()
+
+func hide_empty_spots():
+	for decor_spot in $Decorations.get_children():
+		if decor_spot.decor == null:
+			decor_spot.visible = false
