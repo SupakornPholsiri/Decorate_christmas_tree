@@ -73,8 +73,8 @@ func _physics_process(delta):
 	#region Interaction code
 	var target_area = get_nearest_node(areas)
 	
-	if target_area is DecorationSpot:
-		target_area.is_player_on_top = true
+	if target_area is DecorationSpot or target_area is DecorationBox:
+		target_area.highlight_area()
 	
 	if target_area != null and Input.is_action_just_pressed(player_interact):
 		if target_area is DecorationSpot:

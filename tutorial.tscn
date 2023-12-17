@@ -13,6 +13,7 @@ grow_vertical = 2
 script = ExtResource("1_6g4kk")
 
 [node name="Back" type="Button" parent="."]
+layout_mode = 0
 offset_left = 1082.0
 offset_top = 597.0
 offset_right = 1127.0

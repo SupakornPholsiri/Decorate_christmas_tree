@@ -5,6 +5,10 @@ class_name DecorationBox
 var decor_files : Array[String]
 var decors : Array[Decoration]
 
+var is_player_on_top : bool
+@onready var texture : Texture2D = $Sprite2D.texture
+@onready var texture_highlight : Texture2D = preload("res://empty_spot_highlight.png")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	decor_files = get_all_decor_file("res://decorations/resources/")
@@ -13,7 +17,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	$Sprite2D.texture = texture_highlight if is_player_on_top else texture
+	is_player_on_top = false
 
 func give_decor(player : CharacterBody2D):
 	if player.decor == null:
@@ -29,3 +34,6 @@ func get_all_decor_file(path : String):
 		file_paths.append(file_path)
 		file_name = dir.get_next()
 	return file_paths
+	
+func highlight_area():
+	is_player_on_top = true

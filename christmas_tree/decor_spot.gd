@@ -34,3 +34,6 @@ func remove_decor():
 	decor = null
 	$Sprite2D.texture = no_decor_texture
 	is_spot_empty = true
+	
+func highlight_area():
+	is_player_on_top = true
