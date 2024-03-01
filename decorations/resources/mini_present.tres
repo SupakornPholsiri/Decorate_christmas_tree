@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Decoration" load_steps=3 format=3 uid="uid://cfmyl0eefj2on"]
+
+[ext_resource type="Script" path="res://decorations/Decoration.gd" id="1_4deuq"]
+[ext_resource type="Texture2D" uid="uid://giff4t52p2vg" path="res://decorations/picture/mini present.png" id="2_c80li"]
+
+[resource]
+script = ExtResource("1_4deuq")
+texture = ExtResource("2_c80li")

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Decoration" load_steps=3 format=3 uid="uid://wpj3qk34vvnn"]
+
+[ext_resource type="Script" path="res://decorations/Decoration.gd" id="1_qv163"]
+[ext_resource type="Texture2D" uid="uid://dxpdo1uk4cl3m" path="res://decorations/picture/candy cane.png" id="2_l7ipo"]
+
+[resource]
+script = ExtResource("1_qv163")
+texture = ExtResource("2_l7ipo")

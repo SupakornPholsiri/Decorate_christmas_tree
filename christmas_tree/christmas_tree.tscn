@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjeu0723674cg"]
+
+[ext_resource type="PackedScene" uid="uid://duqwvt2s316ad" path="res://christmas_tree/decor_spot.tscn" id="1_nsph0"]
+[ext_resource type="Script" path="res://christmas_tree/ChristmasTree.gd" id="1_wvvq2"]
+[ext_resource type="Texture2D" uid="uid://bdr1a4l8ixpo8" path="res://christmas_tree/christmas_tree.png" id="2_p1uk5"]
+
+[node name="ChristmasTree" type="Node2D"]
+script = ExtResource("1_wvvq2")
+
+[node name="Tree" type="Sprite2D" parent="."]
+position = Vector2(0, -57.375)
+texture = ExtResource("2_p1uk5")
+
+[node name="Decorations" type="Node2D" parent="."]
+position = Vector2(0, 53)
+
+[node name="decor_spot14" parent="Decorations" instance=ExtResource("1_nsph0")]
+position = Vector2(132, 3)
+
+[node name="decor_spot13" parent="Decorations" instance=ExtResource("1_nsph0")]
+position = Vector2(67, 3)
+
+[node name="decor_spot12" parent="Decorations" instance=ExtResource("1_nsph0")]
+position = Vector2(0, 3)
+
+[node name="decor_spot11" parent="Decorations" instance=ExtResource("1_nsph0")]
+position = Vector2(-68, 3)
+
+[node name="decor_spot10" parent="Decorations" instance=ExtResource("1_nsph0")]
+position = Vector2(-136, 3)
+
+[node name="decor_spot9" parent="Decorations" instance=ExtResource("1_nsph0")]
+position = Vector2(105, -97)
+
+[node name="decor_spot8" parent="Decorations" instance=ExtResource("1_nsph0")]
+position = Vector2(37, -97)
+
+[node name="decor_spot7" parent="Decorations" instance=ExtResource("1_nsph0")]
+position = Vector2(-38, -97)
+
+[node name="decor_spot6" parent="Decorations" instance=ExtResource("1_nsph0")]
+position = Vector2(-108, -97)
+
+[node name="decor_spot5" parent="Decorations" instance=ExtResource("1_nsph0")]
+position = Vector2(62, -199)
+
+[node name="decor_spot4" parent="Decorations" instance=ExtResource("1_nsph0")]
+position = Vector2(0, -199)
+
+[node name="decor_spot3" parent="Decorations" instance=ExtResource("1_nsph0")]
+position = Vector2(-63, -199)
+
+[node name="decor_spot2" parent="Decorations" instance=ExtResource("1_nsph0")]
+position = Vector2(0, -293)
+
+[node name="decor_spot" parent="Decorations" instance=ExtResource("1_nsph0")]
+position = Vector2(0, -376)

@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://tw7xd7cky4ax"]
+
+[ext_resource type="Texture2D" uid="uid://5jr7ncovmlkd" path="res://ladder/Ladder.png" id="1_cw4g1"]
+[ext_resource type="Script" path="res://ladder/ladder.gd" id="1_ugrdm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cg2pp"]
+size = Vector2(32, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g3gyb"]
+size = Vector2(10.88, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8qj5c"]
+size = Vector2(32, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mn7qj"]
+size = Vector2(10.88, 20)
+
+[node name="ladder" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(0, -31.5)
+texture = ExtResource("1_cw4g1")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="bottom_ladder" type="Area2D" parent="."]
+script = ExtResource("1_ugrdm")
+ladder_type = "bottom"
+
+[node name="bottom_CollisionShape2D" type="CollisionShape2D" parent="bottom_ladder"]
+position = Vector2(0, -8.5)
+shape = SubResource("RectangleShape2D_cg2pp")
+
+[node name="CheckPlayerArea" type="Area2D" parent="bottom_ladder"]
+collision_layer = 0
+
+[node name="CollisionShape2D_top" type="CollisionShape2D" parent="bottom_ladder/CheckPlayerArea"]
+position = Vector2(0, -65)
+scale = Vector2(50, 1)
+shape = SubResource("RectangleShape2D_g3gyb")
+
+[node name="top_ladder" type="Area2D" parent="."]
+script = ExtResource("1_ugrdm")
+ladder_type = "top"
+
+[node name="top_CollisionShape2D" type="CollisionShape2D" parent="top_ladder"]
+position = Vector2(0, -57.5)
+shape = SubResource("RectangleShape2D_8qj5c")
+
+[node name="CheckPlayerArea" type="Area2D" parent="top_ladder"]
+collision_layer = 0
+
+[node name="CollisionShape2D_bottom" type="CollisionShape2D" parent="top_ladder/CheckPlayerArea"]
+position = Vector2(0, -2)
+scale = Vector2(50, 1)
+shape = SubResource("RectangleShape2D_mn7qj")
+
+[connection signal="body_entered" from="bottom_ladder/CheckPlayerArea" to="bottom_ladder" method="_on_check_player_area_body_entered"]
+[connection signal="body_exited" from="bottom_ladder/CheckPlayerArea" to="bottom_ladder" method="_on_check_player_area_body_exited"]
+[connection signal="body_entered" from="top_ladder/CheckPlayerArea" to="top_ladder" method="_on_check_player_area_body_entered"]
+[connection signal="body_exited" from="top_ladder/CheckPlayerArea" to="top_ladder" method="_on_check_player_area_body_exited"]
